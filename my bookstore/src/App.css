@@ -1,0 +1,178 @@
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização do corpo */
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Efeito de entrada */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+/* Containers principais */
+   
+.container, .home-container, .livros-container, .usuarios-container {
+    max-width: 900px; 
+    width: 90%;
+    min-height: 500px;
+    background: linear-gradient(145deg, #2a3d55, #1e2a38); /* Cor diferente do fundo */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5), -8px -8px 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+}
+
+/* Cor diferente para os containers de Usuário e Livros */
+.livros-container, .usuarios-container {
+    background: linear-gradient(145deg, #283c4e, #1a2b3d);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Centraliza melhor o conteúdo */
+h1 {
+    font-size: 26px;
+    color: #f1f1f1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Ajuste para espaçar melhor os elementos */
+p, ul {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #34495e;
+    color: #fff;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(145deg, #00a8ff, #0066cc);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 150px; /* Deixando todos os botões com o mesmo tamanho */
+    text-align: center;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #0097e6, #005bb5);
+    transform: scale(1.05);
+}
+
+button.delete {
+    background: linear-gradient(145deg, #ff4b4b, #c40000);
+}
+
+button.delete:hover {
+    background: linear-gradient(145deg, #ff3333, #a80000);
+    transform: scale(1.05);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+th {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Botões dentro da tabela */
+.table-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 📌 Estilização dos links de navegação */
+.navigation-links, .back-to-home {
+    margin-top: 20px;
+}
+
+.navigation-links a, .back-to-home a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(145deg, #00a8ff, #0066cc);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.navigation-links a:hover, .back-to-home a:hover {
+    background: linear-gradient(145deg, #0097e6, #005bb5);
+    transform: scale(1.05);
+}
